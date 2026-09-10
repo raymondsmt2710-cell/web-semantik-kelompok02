@@ -39,7 +39,7 @@ jawaban:
 Tuliskan satu baris N-Quads yang terbentuk:
 
 ```text
-ISI_TRIPLE
+<https://usu.ac.id/mhs/251402113> <http://schema.org/alumniOf> _:b0 .
 ```
 
 ## 5. Hasil Validasi
