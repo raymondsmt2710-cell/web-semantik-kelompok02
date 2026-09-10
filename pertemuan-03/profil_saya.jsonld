@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402113",
+  "name": "Alvin Benyamin Sigalingging",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Pengantar Web Semantik",
+    "Format Dokumen XML"
+  ]
+}
