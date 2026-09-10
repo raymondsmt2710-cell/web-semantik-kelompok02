@@ -1,8 +1,20 @@
 # Latihan Pertemuan 3 - JSON-LD dan Structured Data
 
 ## Identitas
-- Nama: ISI_NAMA
-- NIM: ISI_NIM
+- Nama: Ryan Fredryck Ginting
+- NIM: 251402075
+
+- Nama: Raymond Ganda Parsaoran Simarmata
+- NIM: 251402078
+
+- Nama: Charles
+- NIM: 251402081
+
+- Nama: Alvin Benyamin Sigalingging
+- NIM: 251402113
+
+- Nama: Ryan Dani Stepanus Girsang
+- NIM: 251402140
 
 ## Struktur Hasil
 - `profil_saya.jsonld`
@@ -16,13 +28,13 @@
 3. Node tanpa `@id`: ...
 
 ## 2. Pemeriksaan schema.org
-1. Mengapa tipe yang paling spesifik dan masih tepat sebaiknya dipilih?
+1. Mengapa tipe yang paling spesifik dan masih tepat sebaiknya dipilih?  
 jawaban: 
     Agar data lebih jelas dan sesuai dengan jenis entitas yang dijelaskan, sehingga lebih mudah dipahami oleh mesin.
-2. Mengapa nama properti mengikuti schema.org, sedangkan nilainya boleh berbahasa Indonesia?
+2. Mengapa nama properti mengikuti schema.org, sedangkan nilainya boleh berbahasa Indonesia?  
 jawaban:
     Karena nama properti seperti name, alumniOf, dan knowsAbout harus mengikuti standar schema.org agar dapat dikenali mesin. Nilainya bebas menggunakan bahasa Indonesia sesuai isi data.
-3. Apa manfaat array pada knowsAbout?
+3. Apa manfaat array pada knowsAbout?  
 jawaban:
     Array memungkinkan kita memasukkan dan menyimpan lebih dari satu topik yang diketahui atau dikuasai oleh seseorang.
 
@@ -44,9 +56,9 @@ Tuliskan satu baris N-Quads yang terbentuk:
 ```
 
 ## 5. Hasil Validasi
-- Schema Markup Validator: ...
-- Rich Results Test: ...
-- JSON-LD Playground: ...
+- Schema Markup Validator: Tipe Person terdeteksi, tidak ada kesalahan, dan tidak ada peringatan
+- Rich Results Test: 1 item valid terdeteksi, Data terstruktur yang terdeteksi dengan 8 masalah nonkritis terdeteksi
+- JSON-LD Playground: Triple sudah terbentuk dengan benar
 
 ## 6. Refleksi
 1. Mengapa `@context` disebut jembatan menuju makna?
