@@ -3,16 +3,16 @@
 ## Identitas
 - Nama: Ryan Fredryck Ginting
 - NIM: 251402075
-
+---
 - Nama: Raymond Ganda Parsaoran Simarmata
 - NIM: 251402078
-
+---
 - Nama: Charles
 - NIM: 251402081
-
+---
 - Nama: Alvin Benyamin Sigalingging
 - NIM: 251402113
-
+---
 - Nama: Ryan Dani Stepanus Girsang
 - NIM: 251402140
 
