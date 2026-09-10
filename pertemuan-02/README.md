@@ -1,7 +1,20 @@
 # Pertemuan 2 - Format Dokumen XML
 
 ## 1. Profil XML
-Jelaskan secara singkat struktur XML yang Anda buat.
+Struktur XML-nya seperti ini:
+
+1. Deklarasi XML — `<?xml version="1.0" encoding="UTF-8"?>` di baris pertama, wajib ada dan menyatakan versi serta encoding dokumen.
+2. Komentar — `<!-- Profil mahasiswa Web Semantik -->` sebagai keterangan, tidak memengaruhi data.
+3. Root element — `<profilMahasiswa>`, satu-satunya elemen akar yang membungkus seluruh data (syarat XML well-formed, dimana hanya boleh ada satu root).
+4. Element `<profil>` — muncul berulang (5 kali), satu untuk tiap mahasiswa, dengan atribut `nim` berisi Nomor Induk Mahasiswa masing-masing.
+5. Child elements di dalam setiap `<profil>`:
+   - `<nama>` — nama lengkap mahasiswa
+   - `<angkatan>` — tahun angkatan
+   - `<programStudi>` — program studi
+   - `<hobi>` — muncul dua kali per profil (elemen berulang, karena tiap orang punya 2 hobi)
+   - `<deskripsi>` — deskripsi singkat, ditulis dalam blok teks
+
+Semua tag dibuka-tutup dengan benar dan bersarang (nested) secara konsisten, sehingga dokumen memenuhi syarat **well-formed XML**.
 
 ## 2. Analisis Kesalahan XML
 

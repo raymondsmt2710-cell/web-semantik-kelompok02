@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Profil mahasiswa Web Semantik -->
+<profilMahasiswa>
+    <profil nim="251402075">
+        <nama>Ryan Fredryck Ginting</nama>
+        <angkatan>2024</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+        <hobi>Berenang</hobi>
+        <hobi>Main Game</hobi>
+        <deskripsi>
+            Saya suka tidur.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402113">
+        <nama>Alvin Benyamin Sigalingging</nama>
+        <angkatan>2024</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+        <hobi>Main Gitar</hobi>
+        <hobi>Jogging</hobi>
+        <deskripsi>
+            Saya masih hidup.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402140">
+        <nama>Ryan Dani Stepanus Girsang</nama>
+        <angkatan>2024</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+        <hobi>Main Gitar</hobi>
+        <hobi>Main Game</hobi>
+        <deskripsi>
+            Saya suka bermain game dan main gitar.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402078">
+        <nama>Raymond Ganda Pasaoran Simarmata</nama>
+        <angkatan>2024</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+        <hobi>Main Catur</hobi>
+        <hobi>Baca Buku</hobi>
+        <deskripsi>
+            Saya manusia.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402081">
+        <nama>Charles</nama>
+        <angkatan>2024</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+        <hobi>Kerja</hobi>
+        <hobi>Kerja</hobi>
+        <deskripsi>
+            Saya kerja.
+        </deskripsi>
+    </profil>
+</profilMahasiswa>
