@@ -27,13 +27,14 @@ jawaban:
     Array memungkinkan kita memasukkan dan menyimpan lebih dari satu topik yang diketahui atau dikuasai oleh seseorang.
 
 ## 3. Perbaikan Lima Kesalahan
+
 | No. | Bagian Salah | Alasan | Perbaikan |
 |---|---|---|---|
-| 1 | ... | ... | ... |
-| 2 | ... | ... | ... |
-| 3 | ... | ... | ... |
-| 4 | ... | ... | ... |
-| 5 | ... | ... | ... |
+| 1 | `"@type": "person"` | Penulisan tipe `Person` pada Schema.org bersifat case-sensitive. | Ubah menjadi `"@type": "Person"` |
+| 2 | `'name': "Rina Anggraini"` | JSON menggunakan tanda kutip ganda (`"`), seharusnya menggunakan tanda kutip tunggal (`'`). | Ubah menjadi `"name": "Rina Anggraini"` |
+| 3 | `"birthDate": "12 September 2004"` | Format tanggal tidak menggunakan standar ISO 8601. | Ubah menjadi `"birthDate": "2004-09-12"` |
+| 4 | `"nomorInduk": "221401001"` | `nomorInduk` bukan tipe yang terdaftar di Schema.org. | Menghapus `nomorInduk` |
+| 5 | Koma di properti terakhir | JSON tidak boleh memiliki koma setelah properti terakhir. | Koma setelah `birthDate` dihapus |
 
 ## 4. Triple dari JSON-LD Playground
 Tuliskan satu baris N-Quads yang terbentuk:
