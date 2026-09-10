@@ -16,9 +16,15 @@
 3. Node tanpa `@id`: ...
 
 ## 2. Pemeriksaan schema.org
-1. Alasan memilih tipe paling spesifik: ...
-2. Nama properti dan bahasa nilai: ...
-3. Manfaat array pada `knowsAbout`: ...
+1. Mengapa tipe yang paling spesifik dan masih tepat sebaiknya dipilih?
+jawaban: 
+    Agar data lebih jelas dan sesuai dengan jenis entitas yang dijelaskan, sehingga lebih mudah dipahami oleh mesin.
+2. Mengapa nama properti mengikuti schema.org, sedangkan nilainya boleh berbahasa Indonesia?
+jawaban:
+    Karena nama properti seperti name, alumniOf, dan knowsAbout harus mengikuti standar schema.org agar dapat dikenali mesin. Nilainya bebas menggunakan bahasa Indonesia sesuai isi data.
+3. Apa manfaat array pada knowsAbout?
+jawaban:
+    Array memungkinkan kita memasukkan dan menyimpan lebih dari satu topik yang diketahui atau dikuasai oleh seseorang.
 
 ## 3. Perbaikan Lima Kesalahan
 | No. | Bagian Salah | Alasan | Perbaikan |
