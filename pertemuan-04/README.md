@@ -1,10 +1,10 @@
 # Pertemuan 4 — Metadata dan Interoperabilitas
 
 ## Identitas sumber
-- Judul: [isi judul]
-- Pembuat: [isi pembuat]
-- URI sumber: [isi URI yang dipakai di Turtle dan JSON-LD]
-- Jenis sumber: [isi jenis]
+- Judul: An Introduction to Computer Networks, 2nd Edition
+- Pembuat: Peter L. Dordal
+- URI sumber: https://ecommons.luc.edu/facultybooks/189/
+- Jenis sumber: Text / LearningResource
 
 ## Pemetaan Dublin Core Terms
 | Properti | Nilai | Alasan pemilihan |
