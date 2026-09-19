@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/>; .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#>; .
+
+<https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar>;
+    dcterms:title "Pemrograman Web dengan PHP 7"@id ;
+    dcterms:creator "Betha Sidik"@id ;
+    dcterms:description "Buku panduan untuk pemrograman web dengan PHP versi 7, pemrograman berorientasi objek, serta fitur baru yang ada seperti PDO dan Namespace"@id ;
+    dcterms:created "2017-11-01"^^xsd:date ;
+    dcterms:type "Text" ;
+    dcterms:language "id" ;
+    dcterms:rights "Hak Cipta © 2017 Penerbit Informatika, Bandung. Seluruh hal cipta dilindungi undang-undang" .
