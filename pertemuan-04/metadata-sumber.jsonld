@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "dcterms": "http://purl.org/dc/terms/",
+        "title": "dcterms:title",
+        "creator": "dcterms:creator",
+        "description": "dcterms:description",
+        "created": "dcterms:created",
+        "type": "dcterms:type",
+        "language": "dcterms:language",
+        "rights": "dcterms:rights"
+    },
+    "@id": "https://ecommons.luc.edu/facultybooks/189/",
+    "title": {
+        "@value": "An Introduction to Computer Networks, 2nd Edition",
+        "@language": "en"
+    },
+    "creator": {
+        "@value": "Peter L. Dordal",
+        "@language": "en"
+    },
+    "description": {
+        "@value": "Buku pembelajaran yang membahas dasar-dasar jaringan komputer, termasuk LAN, internetworking, TCP/IP, transport layer, keamanan jaringan, dan manajemen jaringan.",
+        "@language": "id"
+    },
+    "created": "2020-07",
+    "type": "Text",
+    "language": "en",
+    "rights": "CC BY-NC-ND 3.0"
+}
