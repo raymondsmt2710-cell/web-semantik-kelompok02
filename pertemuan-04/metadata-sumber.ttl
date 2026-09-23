@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/>; .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#>; .
+
+<https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar>;
+    dcterms:title "An Introduction to Computer Networks, 2nd Edition"@id ;
+    dcterms:creator "Peter L. Dordal"@id ;
+    dcterms:description "Buku pembelajaran yang membahas dasar-dasar jaringan komputer, termasuk LAN, internetworking, TCP/IP, transport layer, keamanan jaringan, dan manajemen jaringan."@id ;
+    dcterms:created "2020-07"^^xsd:gYearMonth ;
+    dcterms:type "Text/LearningResource" ;
+    dcterms:language "id" ;
+    dcterms:rights "CC BY-NC-ND 3.0" .
