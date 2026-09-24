@@ -18,9 +18,9 @@
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 
 ## Perbandingan serialisasi
-- Turtle: [dua pengamatan sintaks]
-- RDF/XML: [dua pengamatan sintaks]
-- Kesamaan makna: [isi]
+- Turtle: menggunakan sintaks yang lebih ringkas dan menggunakan prefix untuk mempersingkat IRI. Struktur penulisannya lebih mudah dibaca.
+- RDF/XML: menggunakan struktur XML dengan tag pembuka dan penutup serta atribut seperti `rdf:about` dan `rdf:resource`.
+- Kesamaan makna: kedua format merepresentasikan ontology yang sama, sehingga class, property, individual, dan IRI tetap memiliki makna yang sama.
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?

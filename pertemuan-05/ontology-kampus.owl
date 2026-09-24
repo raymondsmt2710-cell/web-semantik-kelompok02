@@ -74,23 +74,23 @@
         <rdf:type rdf:resource="&kampus;Student"/>
         <takesCourse rdf:resource="&kampus;web_semantik"/>
         <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
-        <hasNIM rdf:datatype="&xsd;string">ISI_NIM</hasNIM>
-        <hasName rdf:datatype="&xsd;string">Mahasiswa Anda</hasName>
+        <hasNIM rdf:datatype="&xsd;string">251402078</hasNIM>
+        <hasName rdf:datatype="&xsd;string">Raymond Ganda Persaoran</hasName>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&kampus;mahasiswa_teman">
         <rdf:type rdf:resource="&kampus;Student"/>
         <takesCourse rdf:resource="&kampus;web_semantik"/>
         <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
-        <hasNIM rdf:datatype="&xsd;string">000000000000</hasNIM>
-        <hasName rdf:datatype="&xsd;string">Mahasiswa Teman</hasName>
+        <hasNIM rdf:datatype="&xsd;string">251402113</hasNIM>
+        <hasName rdf:datatype="&xsd;string">Alvin Benyamin Sigalingging</hasName>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&kampus;dosen_1">
         <rdf:type rdf:resource="&kampus;Lecturer"/>
         <teachesCourse rdf:resource="&kampus;web_semantik"/>
         <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
-        <hasName rdf:datatype="&xsd;string">Dosen Satu</hasName>
+        <hasName rdf:datatype="&xsd;string">Muhammad Isa Dadi Hasibuan S.Kom., M.Kom</hasName>
     </owl:NamedIndividual>
 
 </rdf:RDF>
