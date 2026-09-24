@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://semanticweb.org"
+     xml:base="http://semanticweb.org"
+     xmlns:rdf="http://w3.org"
+     xmlns:owl="http://w3.org"
+     xmlns:xsd="http://w3.org"
+     xmlns:rdfs="http://w3.org">
+    <owl:Ontology rdf:about="http://semanticweb.org/"/>
+</rdf:RDF>
