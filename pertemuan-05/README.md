@@ -14,6 +14,26 @@
 | Individual | mahasiswa_anda bertipe Student, dosen_anda bertipe Lecturer, matkul_ws bertipe Course |
 | Axiom/disjointness | Student disjointWith Lecturer |
 
+## Eksplorasi Protégé (pizza.owl)
+
+Sumber: https://protege.stanford.edu/ontologies/pizza/pizza.owl
+Screenshot class hierarchy: ![Pizza hierarchy](screenshots/protege-pizza.png)
+
+| Komponen | Contoh dari pizza.owl | Keterangan |
+| --- | --- | --- |
+| Class | `Pizza` | Konsep umum untuk semua jenis pizza |
+| Subclass | `NamedPizza` subClassOf `Pizza`; `Margherita` subClassOf `NamedPizza` | Pizza dengan nama/resep tertentu |
+| Individual | `Italy` bertipe `Country` | Instance konkret negara asal |
+| Object property | `hasTopping` (domain `Pizza`, range `PizzaTopping`) | Menghubungkan pizza dengan topping-nya; sub-property dari `hasIngredient` |
+| Datatype property | `hasCalorificContentValue` (domain `Food`, range `xsd:integer`) | Tidak ada di file bawaan, ditambahkan sendiri mengikuti tutorial Protégé |
+
+### Catatan tentang domain dan open world
+Property `hasTopping` memiliki domain `Pizza`. Ini tidak berarti reasoner akan
+*menolak* data jika subjeknya bukan Pizza, seperti constraint pada database.
+Justru reasoner akan *menyimpulkan* bahwa setiap subjek yang memakai `hasTopping`
+adalah sebuah `Pizza`. OWL memakai asumsi open world: informasi yang tidak
+dinyatakan dianggap belum diketahui, bukan dianggap salah.
+
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 
