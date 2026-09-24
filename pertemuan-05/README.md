@@ -1,18 +1,18 @@
 # Pertemuan 5 - Ontology dan Arsitektur Web Semantik
 
 ## Ontology mini kampus
-- IRI dasar: [isi IRI]
-- Domain: Kampus
+- IRI dasar: https://kelas.usu.ac.id/ontology#
+- Domain: Universitas Sumatera Utara
 
 ## Komponen ontology
 | Komponen | Isi yang dibuat |
 | --- | --- |
-| Class | [isi] |
-| Subclass | [isi] |
-| Object property | [isi] |
-| Datatype property | [isi] |
-| Individual | [isi] |
-| Axiom/disjointness | [isi] |
+| Class | Person, Course, Department, Faculty, Room, Semester |
+| Subclass | Student subClassOf Person, Lecturer subClassOf Person, UndergraduateStudent subClassOf Student |
+| Object property | Teaches |
+| Datatype property | hasCredit |
+| Individual | mahasiswa_anda bertipe Student, dosen_anda bertipe Lecturer, matkul_ws bertipe Course |
+| Axiom/disjointness | Student disjointWith Lecturer |
 
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
