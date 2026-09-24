@@ -1,0 +1,84 @@
+@prefix : <https://github.com/raymondsmt2710-cell/web-semantik-kelompok02.git> .
+@prefix kampus: <https://contoh.github.io/web-semantik/ISI_NIM/kampus#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://github.com/raymondsmt2710-cell/web-semantik-kelompok02.git>
+    a owl:Ontology ;
+    rdfs:label "Ontology Mini Kampus" .
+
+kampus:takesCourse
+    a owl:ObjectProperty ;
+    rdfs:domain kampus:Student ;
+    rdfs:range kampus:Course .
+
+kampus:teachesCourse
+    a owl:ObjectProperty ;
+    rdfs:domain kampus:Lecturer ;
+    rdfs:range kampus:Course .
+
+kampus:belongsToDepartment
+    a owl:ObjectProperty ;
+    rdfs:domain kampus:Person ;
+    rdfs:range kampus:Department .
+
+kampus:hasNIM
+    a owl:DatatypeProperty ;
+    rdfs:domain kampus:Student ;
+    rdfs:range xsd:string .
+
+kampus:hasName
+    a owl:DatatypeProperty ;
+    rdfs:domain kampus:Person ;
+    rdfs:range xsd:string .
+
+kampus:Person
+    a owl:Class .
+
+kampus:Course
+    a owl:Class .
+
+kampus:Department
+    a owl:Class .
+
+kampus:Student
+    a owl:Class ;
+    rdfs:subClassOf kampus:Person ;
+    owl:disjointWith kampus:Lecturer .
+
+kampus:Lecturer
+    a owl:Class ;
+    rdfs:subClassOf kampus:Person .
+
+kampus:departemen_ti
+    a owl:NamedIndividual ;
+    rdf:type kampus:Department .
+
+kampus:web_semantik
+    a owl:NamedIndividual ;
+    rdf:type kampus:Course .
+
+kampus:mahasiswa_anda
+    a owl:NamedIndividual ;
+    rdf:type kampus:Student ;
+    kampus:takesCourse kampus:web_semantik ;
+    kampus:belongsToDepartment kampus:departemen_ti ;
+    kampus:hasNIM "251402078"^^xsd:string ;
+    kampus:hasName "Raymond Ganda Persaoran"^^xsd:string .
+
+kampus:mahasiswa_teman
+    a owl:NamedIndividual ;
+    rdf:type kampus:Student ;
+    kampus:takesCourse kampus:web_semantik ;
+    kampus:belongsToDepartment kampus:departemen_ti ;
+    kampus:hasNIM "251402113"^^xsd:string ;
+    kampus:hasName "Alvin Benyamin Sigalingging"^^xsd:string .
+
+kampus:dosen_1
+    a owl:NamedIndividual ;
+    rdf:type kampus:Lecturer ;
+    kampus:teachesCourse kampus:web_semantik ;
+    kampus:belongsToDepartment kampus:departemen_ti ;
+    kampus:hasName "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"^^xsd:string .
