@@ -1,9 +1,96 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://semanticweb.org"
-     xml:base="http://semanticweb.org"
-     xmlns:rdf="http://w3.org"
-     xmlns:owl="http://w3.org"
-     xmlns:xsd="http://w3.org"
-     xmlns:rdfs="http://w3.org">
-    <owl:Ontology rdf:about="http://semanticweb.org/"/>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY kampus "https://contoh.github.io/web-semantik/ISI_NIM/kampus#" >
+]>
+<rdf:RDF xmlns="https://github.com/raymondsmt2710-cell/web-semantik-kelompok02.git"
+     xml:base="https://github.com/raymondsmt2710-cell/web-semantik-kelompok02.git"
+     xmlns:rdf="&rdf;"
+     xmlns:owl="&owl;"
+     xmlns:xsd="&xsd;"
+     xmlns:rdfs="&rdfs;"
+     xmlns:kampus="&kampus;">
+
+    <owl:Ontology rdf:about="https://github.com/raymondsmt2710-cell/web-semantik-kelompok02.git">
+        <rdfs:label>Ontology Mini Kampus</rdfs:label>
+    </owl:Ontology>
+
+
+    <owl:ObjectProperty rdf:about="&kampus;takesCourse">
+        <rdfs:domain rdf:resource="&kampus;Student"/>
+        <rdfs:range rdf:resource="&kampus;Course"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&kampus;teachesCourse">
+        <rdfs:domain rdf:resource="&kampus;Lecturer"/>
+        <rdfs:range rdf:resource="&kampus;Course"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&kampus;belongsToDepartment">
+        <rdfs:domain rdf:resource="&kampus;Person"/>
+        <rdfs:range rdf:resource="&kampus;Department"/>
+    </owl:ObjectProperty>
+
+
+    <owl:DatatypeProperty rdf:about="&kampus;hasNIM">
+        <rdfs:domain rdf:resource="&kampus;Student"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&kampus;hasName">
+        <rdfs:domain rdf:resource="&kampus;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+
+    <owl:Class rdf:about="&kampus;Person"/>
+
+    <owl:Class rdf:about="&kampus;Course"/>
+
+    <owl:Class rdf:about="&kampus;Department"/>
+
+    <owl:Class rdf:about="&kampus;Student">
+        <rdfs:subClassOf rdf:resource="&kampus;Person"/>
+        <owl:disjointWith rdf:resource="&kampus;Lecturer"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="&kampus;Lecturer">
+        <rdfs:subClassOf rdf:resource="&kampus;Person"/>
+    </owl:Class>
+
+
+    <owl:NamedIndividual rdf:about="&kampus;departemen_ti">
+        <rdf:type rdf:resource="&kampus;Department"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&kampus;web_semantik">
+        <rdf:type rdf:resource="&kampus;Course"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&kampus;mahasiswa_anda">
+        <rdf:type rdf:resource="&kampus;Student"/>
+        <takesCourse rdf:resource="&kampus;web_semantik"/>
+        <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
+        <hasNIM rdf:datatype="&xsd;string">ISI_NIM</hasNIM>
+        <hasName rdf:datatype="&xsd;string">Mahasiswa Anda</hasName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&kampus;mahasiswa_teman">
+        <rdf:type rdf:resource="&kampus;Student"/>
+        <takesCourse rdf:resource="&kampus;web_semantik"/>
+        <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
+        <hasNIM rdf:datatype="&xsd;string">000000000000</hasNIM>
+        <hasName rdf:datatype="&xsd;string">Mahasiswa Teman</hasName>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&kampus;dosen_1">
+        <rdf:type rdf:resource="&kampus;Lecturer"/>
+        <teachesCourse rdf:resource="&kampus;web_semantik"/>
+        <belongsToDepartment rdf:resource="&kampus;departemen_ti"/>
+        <hasName rdf:datatype="&xsd;string">Dosen Satu</hasName>
+    </owl:NamedIndividual>
+
 </rdf:RDF>
