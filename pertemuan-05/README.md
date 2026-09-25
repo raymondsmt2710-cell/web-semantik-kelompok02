@@ -44,10 +44,10 @@ Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
-=Taksonomi hanya menyusun konsep secara hierarkis (is-a) tanpa makna formal. Ontology lebih lengkap: punya class, property (object/datatype), domain-range, dan aksioma, sehingga bisa dipakai untuk penalaran (inferensi) oleh mesin, bukan sekadar pengelompokan.
+Taksonomi hanya menyusun konsep secara hierarkis (is-a) tanpa makna formal. Ontology lebih lengkap: punya class, property (object/datatype), domain-range, dan aksioma, sehingga bisa dipakai untuk penalaran (inferensi) oleh mesin, bukan sekadar pengelompokan.
 
 2. Mengapa domain pada OWL bukan constraint database?
-=OWL memakai open world assumption.data yang belum dinyatakan dianggap belum diketahui, bukan salah. Jadi jika domain sebuah property adalah Pizza, subjek yang memakainya bukan ditolak, melainkan disimpulkan sebagai instance Pizza. Domain = alat inferensi, bukan validasi/pembatas seperti di database.
+OWL memakai open world assumption.data yang belum dinyatakan dianggap belum diketahui, bukan salah. Jadi jika domain sebuah property adalah Pizza, subjek yang memakainya bukan ditolak, melainkan disimpulkan sebagai instance Pizza. Domain = alat inferensi, bukan validasi/pembatas seperti di database.
 
 3. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
-=Agar data mudah dipahami dan diintegrasikan sistem lain tanpa mapping tambahan (interoperabilitas), sesuai prinsip Linked Data. Ini juga mencegah fragmentasi makna, karena konsep yang sama tidak didefinisikan ulang dengan istilah berbeda-beda oleh tiap pihak.
+Agar data mudah dipahami dan diintegrasikan sistem lain tanpa mapping tambahan (interoperabilitas), sesuai prinsip Linked Data. Ini juga mencegah fragmentasi makna, karena konsep yang sama tidak didefinisikan ulang dengan istilah berbeda-beda oleh tiap pihak.
