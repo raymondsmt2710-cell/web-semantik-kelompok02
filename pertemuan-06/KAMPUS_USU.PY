@@ -24,5 +24,5 @@ g.add((EX.alvin, EX.berasalDari, EX.teknologi_informasi))
 
 print(g.serialize(format="turtle"))
 
-g.serialize("kampus_usu.ttl", format="turtle")
-g.serialize("kampus_usu.jsonld", format="json-ld", indent=2)
+g.serialize("pertemuan-06/kampus_usu.ttl", format="turtle")
+g.serialize("pertemuan-06/kampus_usu.jsonld", format="json-ld", indent=2)
