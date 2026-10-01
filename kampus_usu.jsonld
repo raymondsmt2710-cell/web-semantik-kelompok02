@@ -1,0 +1,59 @@
+[
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Course"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Web Semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#alvin",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Student"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Alvin Benyamin Sigalingging"
+      }
+    ],
+    "https://contoh.github.io/web-semantik/251402113/kampus#berasalDari": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#teknologi_informasi"
+      }
+    ],
+    "https://contoh.github.io/web-semantik/251402113/kampus#mengambil": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#teknologi_informasi",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Department"
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#ida",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Lecturer"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"
+      }
+    ],
+    "https://contoh.github.io/web-semantik/251402113/kampus#mengajar": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
+      }
+    ]
+  }
+]
