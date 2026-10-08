@@ -1,34 +1,5 @@
 [
   {
-    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik",
-    "@type": [
-      "https://contoh.github.io/web-semantik/251402113/kampus#Course"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Web Semantik"
-      }
-    ]
-  },
-  {
-    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#ida",
-    "@type": [
-      "https://contoh.github.io/web-semantik/251402113/kampus#Lecturer"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"
-      }
-    ],
-    "https://contoh.github.io/web-semantik/251402113/kampus#mengajar": [
-      {
-        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
-      }
-    ]
-  },
-  {
     "@id": "https://contoh.github.io/web-semantik/251402113/kampus#teknologi_informasi",
     "@type": [
       "https://contoh.github.io/web-semantik/251402113/kampus#Department"
@@ -53,6 +24,72 @@
     "https://contoh.github.io/web-semantik/251402113/kampus#mengambil": [
       {
         "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#stmt-01",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#ida"
+      }
+    ],
+    "http://purl.org/dc/terms/date": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-10-01"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@value": "Data akademik kampus"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#object": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#mengajar"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#ida"
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#ida",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Lecturer"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"
+      }
+    ],
+    "https://contoh.github.io/web-semantik/251402113/kampus#mengajar": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402113/kampus#web_semantik",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402113/kampus#Course"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Web Semantik"
       }
     ]
   }
