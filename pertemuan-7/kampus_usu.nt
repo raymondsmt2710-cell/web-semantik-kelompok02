@@ -1,0 +1,10 @@
+<https://contoh.github.io/web-semantik/251402113/kampus#alvin> <https://contoh.github.io/web-semantik/251402113/kampus#berasalDari> <https://contoh.github.io/web-semantik/251402113/kampus#teknologi_informasi> .
+<https://contoh.github.io/web-semantik/251402113/kampus#alvin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402113/kampus#Student> .
+<https://contoh.github.io/web-semantik/251402113/kampus#ida> <http://xmlns.com/foaf/0.1/name> "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"@id .
+<https://contoh.github.io/web-semantik/251402113/kampus#alvin> <https://contoh.github.io/web-semantik/251402113/kampus#mengambil> <https://contoh.github.io/web-semantik/251402113/kampus#web_semantik> .
+<https://contoh.github.io/web-semantik/251402113/kampus#teknologi_informasi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402113/kampus#Department> .
+<https://contoh.github.io/web-semantik/251402113/kampus#alvin> <http://xmlns.com/foaf/0.1/name> "Alvin Benyamin Sigalingging"@id .
+<https://contoh.github.io/web-semantik/251402113/kampus#web_semantik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402113/kampus#Course> .
+<https://contoh.github.io/web-semantik/251402113/kampus#ida> <https://contoh.github.io/web-semantik/251402113/kampus#mengajar> <https://contoh.github.io/web-semantik/251402113/kampus#web_semantik> .
+<https://contoh.github.io/web-semantik/251402113/kampus#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik"@id .
+<https://contoh.github.io/web-semantik/251402113/kampus#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402113/kampus#Lecturer> .

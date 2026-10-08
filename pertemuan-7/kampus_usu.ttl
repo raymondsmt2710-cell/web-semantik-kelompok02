@@ -14,3 +14,4 @@ ex:teknologi_informasi a ex:Department .
 
 ex:web_semantik a ex:Course ;
     foaf:name "Web Semantik"@id .
+
