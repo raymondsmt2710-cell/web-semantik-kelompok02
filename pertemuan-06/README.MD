@@ -9,9 +9,9 @@
 - Entitas: [isi]
 
 ## Contoh triple
-1. [subject] - [predicate] - [object]
-2. [subject] - [predicate] - [object]
-3. [subject] - [predicate] - [object]
+1. `ex:ida` - `rdf:type` - `ex:Lecturer`
+2. `ex:ida` - `ex:teaches` - `ex:WebSemantik`
+3. `ex:WebSemantik` - `ex:name` - `"Web Semantik"`
 
 ## Perbandingan serialisasi
 - Turtle: memakai sintaks yang ringkas dan mudah dibaca, penanda 'a' untuk menyatakan kelas entitas
