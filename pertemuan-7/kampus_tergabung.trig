@@ -1,0 +1,33 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402113/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://contoh.github.io/graph/kampus> {
+    ex:ida a ex:Lecturer ;
+        foaf:name "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"@id ;
+        ex:mengajar ex:web_semantik .
+
+    ex:stmt-01 a rdf:Statement ;
+        rdf:subject ex:ida ;
+        rdf:predicate ex:mengajar ;
+        rdf:object ex:web_semantik ;
+        dct:creator ex:ida ;
+        dct:date "2026-10-01"^^xsd:date ;
+        dct:source "Data akademik kampus" .
+}
+
+<https://contoh.github.io/graph/fakultas> {
+    ex:fasilkom a ex:Faculty ;
+        foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id ;
+        ex:memilikiDepartemen ex:ti ;
+        ex:memilikiDepartemen ex:si ;
+        ex:berlokasiDi ex:usu .
+
+    ex:ti a ex:Department ;
+        foaf:name "Teknologi Informasi"@id .
+
+    ex:si a ex:Department ;
+        foaf:name "Sistem Informasi"@id .
+}
