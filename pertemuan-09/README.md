@@ -2,10 +2,13 @@
 
 ## Langkah 1 - Tabel binding
 | Tahap | ?dosen | ?mk | ?namaMK |
-|-------|--------|-----|---------|
-| [isi] | [isi]  | [isi] | [isi] |
-- Jumlah baris hasil akhir: [isi]
-- Peran ?mk: [isi]
+|Pola 1,baris 1|ex:budi|ex:tif2305|---------|
+|Pola 1, baris lain|ex:sari (dan ex:sari)|ex:tif2410 (dan ex:tif2305)|---------|
+|Pola 2|--------|ex:tif2305 (dan ex:tif2410)|"Web Semantik" (dan "Data Mining")|
+|Hasil akhir|ex:budi, ex:sari, ex:sari|ex:tif2305, ex:tif2410, ex:tif2305|"Web Semantik", "Data Mining","Web Semantik"|
+
+- Jumlah baris hasil akhir: 3 baris.
+- Peran ?mk:karena ?mk tidak ada di SELECT, tapi muncul di kedua pola sehingga jadi penghubung join. Hanya baris dengan ?mk yang sama di kedua pola yang lolos.
 
 ## Langkah 2 - ASK dan dunia terbuka
 1. [jawaban]
