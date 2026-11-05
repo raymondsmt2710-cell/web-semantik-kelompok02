@@ -11,8 +11,8 @@
 - Peran ?mk:karena ?mk tidak ada di SELECT, tapi muncul di kedua pola sehingga jadi penghubung join. Hanya baris dengan ?mk yang sama di kedua pola yang lolos.
 
 ## Langkah 2 - ASK dan dunia terbuka
-1. Hasil ASK {ex:budi ex:mengajar ex:tif2410} adalah false, karena fakta itu tidak ada di graf. Kalau menurut asumsi dunia, false brarti fakta tersebut tidak diketahui atau belum tercatat. Jadi hasil false disini tidak membuktikan bahwa Budi tidak mengajar tif2410
-2. Hasilnya 5 baris, yaitu (budi, budi), (budi, sari), (sari, budi), (sari, sari) untuk tif2305, dan (sari, sari) untuk tif2401. Baris dengan ?a sama dengan ?b muncul karena SPARQL membolehkan 2 variabel berbeda terikat ke nilai yang sama, sehingga setiap dosen berpasangan dengan dirinya sendiri.
+1. Hasil ASK {ex:budi ex:mengajar ex:tif2410} adalah false, karena fakta itu tidak ada di graf. Kalau menurut asumsi dunia terbuka, false brarti fakta tersebut tidak diketahui atau belum tercatat. Jadi hasil false disini tidak membuktikan bahwa Budi tidak mengajar tif2410.
+2. Hasilnya 5 baris, yaitu (budi, budi), (budi, sari), (sari, budi), (sari, sari) untuk tif2305, dan (sari, sari) untuk tif2410. Baris dengan ?a sama dengan ?b muncul karena SPARQL membolehkan 2 variabel berbeda terikat ke nilai yang sama, sehingga setiap dosen berpasangan dengan dirinya sendiri.
 3. Pola ?mk ex:nama "Web Semantik" menghasilkan nol baris pada graf yang menulis "Web Semantik"@id karena RDF menganggap "Web Semantik" dan "Web Semantik"@id sebagai 2 teks yang berbeda, sehingga tidak ada data yg cocok.
 
 ## Langkah 3 - Query lokal
