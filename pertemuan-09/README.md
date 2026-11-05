@@ -21,9 +21,11 @@
 - Fakta yang ditambahkan: [isi]
 
 ## Langkah 4 - Wikidata
-- Jumlah baris Q1 dengan wdt:P31: [isi]
-- Jumlah baris Q1 dengan wdt:P31/wdt:P279*: [isi]
-- Penjelasan perbedaan: [isi]
+- Jumlah baris Q1 dengan wdt:P31: [20]
+- Jumlah baris Q1 dengan wdt:P31/wdt:P279*: [20]
+- Penjelasan perbedaan: [Jumlah hasil yang ditampilkan tetap 20 baris karena query menggunakan LIMIT 20 artinya hasil yang ditampilkan dibatasi maksimal 20 baris.
+    - wdt:P31 wd:Q3918 berfungsi untuk mencari universitas yang secara langsung memiliki tipe university.
+    - Sedangkan wdt:P31/wdt:P279* wd:Q3918 juga menelusuri hubungan kelas turunan (subclass) dari university. Karena itu, hasil pencarian bisa mencakup institusi pendidikan yang lebih spesifik yaitu politeknik yang artinya klasifikasinya terhubung ke kelas university melalui hubungan subclass di Wikidata.]
 
 ## Langkah 5 - Endpoint dari Python
 - agent=UA: [isi]
