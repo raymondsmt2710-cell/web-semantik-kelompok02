@@ -16,9 +16,11 @@
 3. [jawaban]
 
 ## Langkah 3 - Query lokal
-- IRI dasar graf: [isi]
-- Jumlah triple awal / akhir: [isi] / [isi]
-- Fakta yang ditambahkan: [isi]
+- IRI dasar graf: https://contoh.github.io/web-semantik/251402113/kampus# (dibaca otomatis dari prefix ex: di ../pertemuan-06/kampus_usu.ttl)
+- Jumlah triple awal / akhir: 10 / 12
+- Fakta yang ditambahkan:
+    1. ex:ida ex:mengajar ex:tif3501 .
+    2. ex:tif3501 foaf:name "Rekayasa Ontologi"@id .
 
 ## Langkah 4 - Wikidata
 - Jumlah baris Q1 dengan wdt:P31: [20]
