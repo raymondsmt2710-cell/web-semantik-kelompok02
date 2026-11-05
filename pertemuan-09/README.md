@@ -34,5 +34,8 @@
 
 ## Refleksi
 1. Di titik mana SPARQL berbeda dari SQL?
+    SPARQL digunakan untuk mengolah data berbentuk graf RDF dengan pola triple, sedangkan SQL digunakan untuk mengolah data dalam tabel relasional. SPARQL menggunakan pola triple untuk menghubungkan data, sementara SQL menggunakan tabel dan JOIN.
 2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
+    Graf lokal (rdflib) digunakan ketika ingin mengolah atau menambahkan data RDF milik sendiri. Endpoint publik digunakan ketika ingin mengambil data dari sumber eksternal seperti Wikidata.
 3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
+    Hasil yang menarik adalah query ASK yang awalnya menghasilkan False, kemudian berubah menjadi True setelah dilakukan INSERT. Hal ini terjadi karena fakta tersebut belum tersedia pada graf RDF awal, tetapi menjadi tersedia setelah data baru ditambahkan.
