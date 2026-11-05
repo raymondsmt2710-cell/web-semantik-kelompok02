@@ -28,9 +28,9 @@
     - Sedangkan wdt:P31/wdt:P279* wd:Q3918 juga menelusuri hubungan kelas turunan (subclass) dari university. Karena itu, hasil pencarian bisa mencakup institusi pendidikan yang lebih spesifik yaitu politeknik yang artinya klasifikasinya terhubung ke kelas university melalui hubungan subclass di Wikidata.]
 
 ## Langkah 5 - Endpoint dari Python
-- agent=UA: [isi]
-- setReturnFormat(JSON): [isi]
-- b.get("kotaLabel", {}): [isi]
+- agent=UA: [Mengidentifikasi aplikasi yang mengakses endpoint Wikidata]
+- setReturnFormat(JSON): [Menentukan format hasil query menjadi JSON agar dapat diproses oleh Python]
+- b.get("kotaLabel", {}): [Mengambil nama kota dari hasil query. Jika data kota tidak tersedia, digunakan nilai kosong agar program tidak mengalami KeyError]
 
 ## Refleksi
 1. Di titik mana SPARQL berbeda dari SQL?
