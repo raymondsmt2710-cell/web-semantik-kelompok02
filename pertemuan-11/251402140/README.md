@@ -10,7 +10,7 @@
 - Output demo_c.py: 48 triple, film tanpa tanggal: 16
 - Sumber data: DBpedia
 - Triple yang tetap tercetak untuk film tanpa tanggal: a schema:Movie, schema:name, schema:director
-- Query lokal tanpa internet: ketika seluruh demo_c.py dijalankan tanpa internet, program berhenti di baris 15. Error yg muncul adalah `urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>`, karena komputer tidak bisa menemukan alamat dbpedia.org. Program berhenti sebelum sampai baris serialize dan baris yang membaca film_nolan.ttl. Jadi kedua baris tidak pernah dijalankan
+- Query lokal tanpa internet: Q_TANPA_TANGGAL berhasil dijalankan meskipun tanpa internet. Ini karena film_nolan.ttl sudah tersimpan di laptop dan rdflib membacanya langsung ke memori tanpa jaringan. Tapi jika menjalankan seluruhnya tanpa internet, maka akan menghasilkan error `urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>`.
 - Mengapa dbo:Film memberi 0 pada film_nolan.ttl: karena film_nolan.ttl hanya berisi schema:Movie dan tidak ada triple bertipe dbo:Film.
 
 ## Bagian C - Materialisasi
