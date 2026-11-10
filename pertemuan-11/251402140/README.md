@@ -23,9 +23,9 @@
 ## Bagian D - Diagnosis
 | Query | Hasil mesin | Gejala | Penyebab (baris yang salah) | Hasil setelah diperbaiki |
 |-------|-------------|--------|-----------------------------|--------------------------|
-| rusak_a | [isi] | [isi] | [isi] | [isi] |
-| rusak_b | [isi] | [isi] | [isi] | [isi] |
-| rusak_c | [isi] | [isi] | [isi] | [isi] |
+| rusak_a | 0 triple | Graf kosong, tanpa error | Baris CONSTRUCT { ?film ex:judul ?j . } memakai ?film, padahal WHERE hanya mengikat ?f | 3 triple, satu judul per film Nolan (Following, Insomnia, Memento). Perbaikan: ?film di CONSTRUCT diganti ?f |
+| rusak_b | 4 triple | 2 nilai yang tampak sama | Baris ?o foaf:name\|rdfs:label\|schema:name ?n . mengambil dua nama Nolan, satu tanpa tag bahasa dan satu @en | 3 triple, satu ex:nama per orang. Perbaikan: tambah BIND(STR(?n0) AS ?n) sehingga tag bahasa hilang |
+| rusak_c | 0 triple | Superkelas tidak ditemukan | Baris ?x a ex:Permukiman . tidak memakai jalur rdfs:subClassOf* | 3 triple: Medan, Surabaya, Tomok. Perbaikan: pola diganti ?x a/rdfs:subClassOf* ex:Permukiman |
 
 ## Bagian E - Etika dan diskusi
 | Aturan | a_kota_limit.rq | demo_c.py |
