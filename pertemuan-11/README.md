@@ -12,10 +12,12 @@
 ## Langkah 2 - Tebak lalu cek
 | Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|---------|-------------|-------------------------|
-| A    | [isi]   | [isi]       | [isi]                   |
-| B    | [isi]   | [isi]       | [isi]                   |
-| C    | [isi]   | [isi]       | [isi]                   |
-| D    | [isi]   | [isi]       | [isi]                   |
+| A    | 3 baris   | 3 baris       | tidak meleset. Hasil mencakup DosenTetap, DosenTamu, dan Dosen                   |
+| B    | 3 baris   | 4 baris       | tidak meleset. Sari muncul dua kali karena memiliki dua tipe, yaitu DosenTetap dan DosenTamu                   |
+| C    | 3 triple   | 3 triple       | tidak meleset. CONSTRUCT menghasilkan tiga triple Pegawai untuk Budi, Sari, dan Rudi                   |
+| D    | 0 triple   | 0 triple       | tidak meleset. Variabel ?n tidak terikat karena Rudi tidak memiliki ex:nama, sehingga triple tidak dibuat tanpa pesan error                   |
+
+Saya kira setiap individu hanya muncul satu kali. Ternyata Sari muncul dua kali karena memiliki dua tipe, yaitu DosenTetap dan DosenTamu.
 
 ## Langkah 3 - Graf kampus lokal
 - Berkas sumber dan IRI dasar graf: pertemuan-09/kampus_usu_v2.ttl dengan IRI dasar https://contoh.github.io/web-semantik/251402113/kampus#.
