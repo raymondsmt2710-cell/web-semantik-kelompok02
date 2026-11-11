@@ -1,0 +1,5 @@
+@prefix schema: <https://schema.org/> .
+
+<https://contoh.github.io/web-semantik/251402113/kampus#ida> a schema:Person ;
+    schema:name "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom"@id .
+
