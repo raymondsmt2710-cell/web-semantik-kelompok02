@@ -18,12 +18,12 @@
 | D    | [isi]   | [isi]       | [isi]                   |
 
 ## Langkah 3 - Graf kampus lokal
-- Berkas sumber dan IRI dasar graf: [isi]
-- Kelas dosen dan properti nama: [isi]
-- Triple hasil pemetaan: [isi]
-- foaf:Person sebelum / sesudah: [isi] / [isi]
-- Triple asli vs triple turunan: [jawaban]
-- Dosen baru setelah program selesai: [jawaban]
+- Berkas sumber dan IRI dasar graf: pertemuan-09/kampus_usu_v2.ttl dengan IRI dasar https://contoh.github.io/web-semantik/251402113/kampus#.
+- Kelas dosen dan properti nama: ex:Lecturer dan foaf:name.
+- Triple hasil pemetaan: 2 triple, yaitu pemetaan individu dosen ex:ida menjadi schema:Person dan pemetaan namanya menjadi schema:name.
+- foaf:Person sebelum / sesudah: 0 / 1
+- Triple asli vs triple turunan: Triple asli merupakan triple yang sudah tersedia di graf sumber, sedangkan triple turunan merupakan triple baru yang dihasilkan melalui hierarki kelas. Pada proses ini, ex:ida memperoleh tipe ex:Pegawai dan foaf:Person melalui hierarki ex:Lecturer -> ex:Pegawai -> foaf:Person.
+- Dosen baru setelah program selesai: Dosen baru tidak otomatis memperoleh tipe foaf:Person karena proses materialisasi hanya dilakukan ketika program dijalankan. Untuk memasukkan dosen baru ke dalam hasil inferensi, graf harus diperbarui dan program dijalankan kembali.
 
 ## Langkah 4 - Wikidata
 - Jumlah triple Q6: [isi]
