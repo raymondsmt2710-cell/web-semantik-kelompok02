@@ -1,13 +1,20 @@
 # Pertemuan 11 - CONSTRUCT dan Hierarki Data
 
 ## Langkah 1 - Solution menjadi triple
+
 | Solution | ?d | ?mk | Triple yang dicetak |
 |----------|----|-----|---------------------|
-| [isi]    | [isi] | [isi] | [isi]           |
-- Jumlah solution: [isi]
-- Jumlah cetakan triple: [isi]
-- Jumlah triple di graf hasil: [isi]
-- Triple yang tercetak lebih dari sekali: [isi]
+| 1 | ex:budi | ex:tif2108 | ex:tif2108 a ex:MataKuliahAktif; ex:tif2108 ex:diampuOleh ex:budi |
+| 2 | ex:budi | ex:tif2104 | ex:tif2104 a ex:MataKuliahAktif; ex:tif2104 ex:diampuOleh ex:budi |
+| 3 | ex:sari | ex:tif2108 | ex:tif2108 a ex:MataKuliahAktif; ex:tif2108 ex:diampuOleh ex:sari |
+| 4 | ex:ida | ex:tif2104 | ex:tif2104 a ex:MataKuliahAktif; ex:tif2104 ex:diampuOleh ex:ida |
+
+- Jumlah solution: 4
+- Jumlah cetakan triple: 8
+- Jumlah triple di graf hasil: 6
+- Triple yang tercetak lebih dari sekali:
+  - ex:tif2108 a ex:MataKuliahAktif (2 kali).
+  - ex:tif2104 a ex:MataKuliahAktif (2 kali).
 
 ## Langkah 2 - Tebak lalu cek
 | Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
