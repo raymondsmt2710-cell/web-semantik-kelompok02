@@ -1,29 +1,38 @@
 # Pertemuan 11 - CONSTRUCT dan Hierarki Data
 
 ## Langkah 1 - Solution menjadi triple
+
 | Solution | ?d | ?mk | Triple yang dicetak |
 |----------|----|-----|---------------------|
-| [isi]    | [isi] | [isi] | [isi]           |
-- Jumlah solution: [isi]
-- Jumlah cetakan triple: [isi]
-- Jumlah triple di graf hasil: [isi]
-- Triple yang tercetak lebih dari sekali: [isi]
+| 1 | ex:budi | ex:tif2108 | ex:tif2108 a ex:MataKuliahAktif; ex:tif2108 ex:diampuOleh ex:budi |
+| 2 | ex:budi | ex:tif2104 | ex:tif2104 a ex:MataKuliahAktif; ex:tif2104 ex:diampuOleh ex:budi |
+| 3 | ex:sari | ex:tif2108 | ex:tif2108 a ex:MataKuliahAktif; ex:tif2108 ex:diampuOleh ex:sari |
+| 4 | ex:ida | ex:tif2104 | ex:tif2104 a ex:MataKuliahAktif; ex:tif2104 ex:diampuOleh ex:ida |
+
+- Jumlah solution: 4
+- Jumlah cetakan triple: 8
+- Jumlah triple di graf hasil: 6
+- Triple yang tercetak lebih dari sekali:
+  - ex:tif2108 a ex:MataKuliahAktif (2 kali).
+  - ex:tif2104 a ex:MataKuliahAktif (2 kali).
 
 ## Langkah 2 - Tebak lalu cek
 | Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|---------|-------------|-------------------------|
-| A    | [isi]   | [isi]       | [isi]                   |
-| B    | [isi]   | [isi]       | [isi]                   |
-| C    | [isi]   | [isi]       | [isi]                   |
-| D    | [isi]   | [isi]       | [isi]                   |
+| A    | 3 baris   | 3 baris       | tidak meleset. Hasil mencakup DosenTetap, DosenTamu, dan Dosen                   |
+| B    | 3 baris   | 4 baris       | tidak meleset. Sari muncul dua kali karena memiliki dua tipe, yaitu DosenTetap dan DosenTamu                   |
+| C    | 3 triple   | 3 triple       | tidak meleset. CONSTRUCT menghasilkan tiga triple Pegawai untuk Budi, Sari, dan Rudi                   |
+| D    | 0 triple   | 0 triple       | tidak meleset. Variabel ?n tidak terikat karena Rudi tidak memiliki ex:nama, sehingga triple tidak dibuat tanpa pesan error                   |
+
+Saya kira setiap individu hanya muncul satu kali. Ternyata Sari muncul dua kali karena memiliki dua tipe, yaitu DosenTetap dan DosenTamu.
 
 ## Langkah 3 - Graf kampus lokal
-- Berkas sumber dan IRI dasar graf: [isi]
-- Kelas dosen dan properti nama: [isi]
-- Triple hasil pemetaan: [isi]
-- foaf:Person sebelum / sesudah: [isi] / [isi]
-- Triple asli vs triple turunan: [jawaban]
-- Dosen baru setelah program selesai: [jawaban]
+- Berkas sumber dan IRI dasar graf: pertemuan-09/kampus_usu_v2.ttl dengan IRI dasar https://contoh.github.io/web-semantik/251402113/kampus#.
+- Kelas dosen dan properti nama: ex:Lecturer dan foaf:name.
+- Triple hasil pemetaan: 2 triple, yaitu pemetaan individu dosen ex:ida menjadi schema:Person dan pemetaan namanya menjadi schema:name.
+- foaf:Person sebelum / sesudah: 0 / 1
+- Triple asli vs triple turunan: Triple asli merupakan triple yang sudah tersedia di graf sumber, sedangkan triple turunan merupakan triple baru yang dihasilkan melalui hierarki kelas. Pada proses ini, ex:ida memperoleh tipe ex:Pegawai dan foaf:Person melalui hierarki ex:Lecturer -> ex:Pegawai -> foaf:Person.
+- Dosen baru setelah program selesai: Dosen baru tidak otomatis memperoleh tipe foaf:Person karena proses materialisasi hanya dilakukan ketika program dijalankan. Untuk memasukkan dosen baru ke dalam hasil inferensi, graf harus diperbarui dan program dijalankan kembali.
 
 ## Langkah 4 - Wikidata
 - Jumlah triple Q6: [142]
@@ -48,13 +57,19 @@ Operator + menelusuri P279 secara transitif, jadi satu pernyataan subclass of ya
 Kemungkinan penyebabnya adalah kesalahan pemodelan di Wikidata (over-generalized subclass link).
 
 ## Langkah 5 - Graf dari Python
-- Jumlah triple universitas.ttl: [isi]
-- Jumlah baris universitas_per_kota.csv: [isi]
-- setReturnFormat(TURTLE): [isi]
-- Graph().parse(data=...): [isi]
-- Mengapa q_kota tidak memanggil endpoint: [isi]
+- Jumlah triple universitas.ttl: 134
+- Jumlah baris universitas_per_kota.csv: [isi] (tanpa baris judul)
+- setReturnFormat(TURTLE): Baris ini meminta balasan dalam format Turtle. Q6 adalah CONSTRUCT, jadi hasilnya berupa graf RDF, bukan tabel. Bersama `setOnlyConneg(True)`, format itu diminta lewat header HTTP `Accept: text/turtle` saja, sehingga Wikidata membalas dengan teks Turtle. Saat berkas Q6 saya masih berisi versi SELECT, Wikidata membalas tabel `application/sparql-results+xml` dan `Graph().parse()` gagal. Ini menunjukkan format Turtle hanya bisa diperoleh dari query yang menghasilkan graf.
+- Graph().parse(data=...): `queryAndConvert()` hanya mengembalikan teks Turtle, belum berupa graf. `Graph().parse(data=..., format="turtle")` membaca teks itu langsung dari memori (argumen `data=`, bukan nama berkas) dan mengubahnya menjadi objek Graph rdflib berisi 134 triple. Setelah itu graf bisa dihitung dengan `len(g)`, disimpan dengan `g.serialize("universitas.ttl")`, dan di-query dengan `g.query()`.
+- Mengapa q_kota tidak memanggil endpoint: `q_kota` dijalankan dengan `g.query(q_kota)`, yaitu method milik objek Graph lokal. Query itu dieksekusi oleh mesin SPARQL rdflib di laptop atas triple yang sudah ada di memori, yang isinya sama dengan universitas.ttl. Satu-satunya baris yang menghubungi Wikidata adalah `sp.queryAndConvert()`, dan baris itu hanya dipanggil sekali. universitas.ttl menjadi cache: query berikutnya cukup dijalankan pada graf lokal tanpa membebani endpoint publik.
+- Catatan: satu universitas bisa punya lebih dari satu nilai `wdt:P131` (misalnya kota dan provinsinya), sehingga ia terhitung di setiap wilayah itu. `COUNT(DISTINCT ?u)` hanya mencegah universitas yang sama terhitung dua kali di wilayah yang sama.
 
 ## Refleksi
-1. Mengapa jumlah triple hasil CONSTRUCT bisa lebih kecil dari jumlah baris SELECT dengan WHERE yang sama?
-2. Bila taksonomi di graf kampus Anda berubah bulan depan, apa yang terjadi pada triple turunan di kampus_usu_v4.ttl?
-3. Kapan Anda menyimpan hasil query sebagai tabel (CSV), dan kapan sebagai graf (Turtle)?
+1. **Mengapa jumlah triple CONSTRUCT bisa lebih kecil dari jumlah baris SELECT?**
+   SELECT menghasilkan satu baris per solution, dan baris yang sama boleh muncul berulang. CONSTRUCT mencetak template sekali per solution, tetapi hasilnya graf, yaitu himpunan triple, sehingga triple yang identik hanya disimpan sekali. Di Langkah 1, 4 solution × 2 pola menghasilkan 8 cetakan, tetapi grafnya hanya berisi 6 triple: `ex:tif2108 a ex:MataKuliahAktif` dan `ex:tif2104 a ex:MataKuliahAktif` masing-masing tercetak dua kali karena tiap mata kuliah diampu dua dosen. Di Langkah 2, soal B menghasilkan 4 baris karena Sari muncul dua kali (lewat DosenTetap dan DosenTamu), sedangkan soal C dengan WHERE yang sama hanya menghasilkan 3 triple. Di Langkah 4, Q6 dengan LIMIT 50 dan 3 pola seharusnya maksimal 150 triple, tetapi hasilnya 134. Universitas yang punya beberapa nilai `wdt:P131` muncul di beberapa solution, sehingga triple `a ex:Universitas` dan `ex:nama`-nya tercetak kembar lalu digabung.
+
+2. **Bila taksonomi graf kampus berubah bulan depan?**
+   Triple turunan di kampus_usu_v4.ttl tidak ikut berubah. Materialisasi hanya potret saat program dijalankan: triple seperti `?x a ex:Pegawai` dan `?x a foaf:Person` disimpan sebagai triple biasa, bukan sebagai aturan. Misalnya bulan depan `ex:Dosen` tidak lagi subkelas `ex:Pegawai`. Triple `ex:<dosen> a ex:Pegawai` dan `a foaf:Person` tetap ada dan kini salah, sedangkan query `SELECT ?x WHERE { ?x a foaf:Person }` tetap menghitung semua dosen. Masalah lain, kampus_usu_v4.ttl mencampur triple asli dan turunan tanpa penanda, sehingga saya tidak bisa langsung tahu mana yang harus dihapus. Cara yang lebih aman: simpan triple turunan di berkas terpisah, buang berkas itu saat taksonomi berubah, lalu jalankan ulang materialisasi dari graf sumber. Hal yang sama berlaku untuk dosen baru, yang tidak akan menjadi foaf:Person sampai program dijalankan ulang. Pekerjaan inilah yang nantinya dilakukan otomatis oleh reasoner.
+
+3. **Kapan disimpan sebagai tabel (CSV), kapan sebagai graf (Turtle)?**
+   Saya menyimpan sebagai CSV bila hasilnya adalah jawaban akhir untuk dibaca manusia atau diolah alat lain, seperti hitungan, ringkasan, atau data untuk grafik dan spreadsheet. Contohnya universitas_per_kota.csv: satu baris per wilayah dengan satu angka, hasil agregasi `GROUP BY` yang langsung bisa dibuka di Excel. Saya menyimpan sebagai Turtle bila hasilnya masih akan di-query, digabung dengan data lain, atau dipakai ulang sebagai data. Contohnya universitas.ttl (134 triple): graf itu sudah memakai kosakata `ex:` saya, IRI Wikidata-nya tetap utuh sehingga bisa ditautkan dengan graf kampus, dan berfungsi sebagai cache sehingga query berikutnya seperti q_kota tidak perlu menghubungi endpoint lagi. Polanya: ambil dari endpoint dan simpan sebagai Turtle sekali, lalu turunkan berbagai CSV dari graf lokal itu sesuai kebutuhan.

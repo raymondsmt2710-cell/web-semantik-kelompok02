@@ -1,0 +1,19 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dbr:Following a schema:Movie ;
+    schema:datePublished "1998-09-12"^^xsd:date ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Following"@en .
+
+dbr:Insomnia a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Insomnia"@en .
+
+dbr:Memento a schema:Movie ;
+    schema:datePublished "2000-09-05"^^xsd:date,
+        "2001-03-16"^^xsd:date ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Memento"@en .
+
