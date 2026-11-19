@@ -18,11 +18,11 @@
 | D | OWL RL | [isi] | [isi] | [isi] |
 
 ## Langkah 3 - Reasoner pada graf kampus
-- Berkas sumber dan IRI dasar graf: [isi]
-- Asserted / closure / inferred / bermakna: [isi] / [isi] / [isi] / [isi]
-- Triple di v4 yang tidak ada di asserted: [isi]
-- Turunan yang muncul karena domain dan range ex:mengajar: [jawaban]
-- Bila menambah dosen baru: [jawaban]
+- Berkas sumber dan IRI dasar graf: ../pertemuan-09/kampus_usu_v2.ttl, https://contoh.github.io/web-semantik/251402113/kampus#
+- Asserted / closure / inferred / bermakna: 16 / 56 / 40 / 5
+- Triple di v4 yang tidak ada di asserted: 2
+- Turunan yang muncul karena domain dan range ex:mengajar: ex:tif3501 a ex:MataKuliah dan ex:web_semantik a ex:MataKuliah, berdasarkan aturan range. Aturan domain juga menyimpulkan ex:ida a ex:Lecturer, tetapi triple tersebut sudah ada di asserted.
+- Bila menambah dosen baru: menambahkan data dosen beserta triple ex:mengajar yang menghubungkan dosen dengan mata kuliah. Reasoner akan menghasilkan inferensi berdasarkan schema domain, range, dan subclass secara otomatis.
 
 ## Langkah 4 - Wikidata
 - ?n Q8 / Q9: 877 / 1343
