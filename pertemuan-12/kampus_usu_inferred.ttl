@@ -1,0 +1,12 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://contoh.github.io/web-semantik/251402113/kampus#Lecturer> rdfs:subClassOf foaf:Person .
+
+<https://contoh.github.io/web-semantik/251402113/kampus#ida> a foaf:Person,
+        <https://contoh.github.io/web-semantik/251402113/kampus#Pegawai> .
+
+<https://contoh.github.io/web-semantik/251402113/kampus#tif3501> a <https://contoh.github.io/web-semantik/251402113/kampus#MataKuliah> .
+
+<https://contoh.github.io/web-semantik/251402113/kampus#web_semantik> a <https://contoh.github.io/web-semantik/251402113/kampus#MataKuliah> .
+
