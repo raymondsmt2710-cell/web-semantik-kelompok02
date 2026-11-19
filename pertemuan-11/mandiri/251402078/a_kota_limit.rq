@@ -1,0 +1,10 @@
+PREFIX ex: <http://contoh.id/>;
+   SELECT ?kota ?namaKota ?populasi
+WHERE {
+  ?kota wdt:P31/wdt:P279* wd:Q515 ;
+        wdt:P17 wd:Q252 ;
+        wdt:P1082 ?populasi ;
+        rdfs:label ?namaKota .
+  FILTER ( LANG(?namaKota) = "id" )
+}
+LIMIT 10
