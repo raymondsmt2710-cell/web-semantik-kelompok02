@@ -9,13 +9,14 @@
 - Triple asserted yang tidak menurunkan apa pun, dan alasannya: [isi]
 
 ## Langkah 2 - Tebak lalu cek
+
 | Soal | Profil | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|--------|---------|-------------|-------------------------|
-| A | RDFS | [isi] | [isi] | [isi] |
-| B | OWL RL | [isi] | [isi] | [isi] |
-| C | RDFS | [isi] | [isi] | [isi] |
-| C | OWL RL | [isi] | [isi] | [isi] |
-| D | OWL RL | [isi] | [isi] | [isi] |
+| A | RDFS | 3 baris (budi, andi, sari) | 3 baris | Tepat. budi lewat domain → Dosen → Pegawai → Orang; andi lewat range → Mahasiswa → Orang; sari lewat DosenTamu → Dosen → Pegawai → Orang. |
+| B | OWL RL | 10 baris | 10 baris | Tepat. Rantai 5 simpul (ruang301 → gedungC → fasilkom → usu → medan) dengan owl:TransitiveProperty memberi semua pasangan berurutan: C(5,2) = 4 asserted + 6 turunan. |
+| C | RDFS | 0 baris | 0 baris | Tepat. Profil RDFS tidak mengenal owl:inverseOf, jadi aksioma itu diam saja tanpa pesan error. |
+| C | OWL RL | 1 baris (andi, budi) | 1 baris | Tepat. Aturan prp-inv1 OWL RL menurunkan ex:andi ex:dibimbing ex:budi dari ex:budi ex:membimbing ex:andi. |
+| D | OWL RL | false | false | Tepat. false di sini berarti "tidak diketahui", bukan "medan bukan Tempat" (dunia terbuka). Tidak ada triple atau aturan yang menyatakan medan bertipe ex:Tempat; owl:disjointWith hanya melarang satu individu menjadi Orang sekaligus Tempat, tidak memberi tipe kepada siapa pun. |
 
 ## Langkah 3 - Reasoner pada graf kampus
 - Berkas sumber dan IRI dasar graf: ../pertemuan-09/kampus_usu_v2.ttl, https://contoh.github.io/web-semantik/251402113/kampus#
