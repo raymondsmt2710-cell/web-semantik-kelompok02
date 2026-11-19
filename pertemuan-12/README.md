@@ -1,12 +1,22 @@
 # Pertemuan 12 - Inferensi dan Reasoning
 
 ## Langkah 1 - Closure dengan tangan
+
 | # | Triple turunan | Aturan | Premis |
 |---|----------------|--------|--------|
-| [isi] | [isi] | [isi] | [isi] |
-- Jumlah triple turunan bermakna: [isi]
-- Triple yang baru ditemukan di putaran kedua: [isi]
-- Triple asserted yang tidak menurunkan apa pun, dan alasannya: [isi]
+| 1 | `ex:budi a ex:Dosen` | `rdfs2` | Domain `ex:membimbing` + `ex:budi ex:membimbing ex:andi` |
+| 2 | `ex:andi a ex:Mahasiswa` | `rdfs3` | Range `ex:membimbing` + `ex:budi ex:membimbing ex:andi` |
+| 3 | `ex:budi ex:mengenal ex:andi` | `rdfs7` | `ex:membimbing rdfs:subPropertyOf ex:mengenal` + `ex:budi ex:membimbing ex:andi` |
+| 4 | `ex:sari a ex:Dosen` | `rdfs9` | `ex:sari a ex:DosenTamu` + `ex:DosenTamu rdfs:subClassOf ex:Dosen` |
+| 5 | `ex:budi a ex:Pegawai` | `rdfs9` | `ex:budi a ex:Dosen` + `ex:Dosen rdfs:subClassOf ex:Pegawai` |
+| 6 | `ex:sari a ex:Pegawai` | `rdfs9` | `ex:sari a ex:Dosen` + `ex:Dosen rdfs:subClassOf ex:Pegawai` |
+| 7 | `ex:andi a ex:Orang` | `rdfs9` | `ex:andi a ex:Mahasiswa` + `ex:Mahasiswa rdfs:subClassOf ex:Orang` |
+| 8 | `ex:budi a ex:Orang` | `rdfs9` | `ex:budi a ex:Pegawai` + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+| 9 | `ex:sari a ex:Orang` | `rdfs9` | `ex:sari a ex:Pegawai` + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+
+- Jumlah triple turunan bermakna: **9 triple**.
+- Triple yang baru ditemukan di putaran kedua: `ex:budi a ex:Pegawai`, `ex:sari a ex:Pegawai`, dan `ex:andi a ex:Orang`. Pada putaran berikutnya ditemukan `ex:budi a ex:Orang` dan `ex:sari a ex:Orang`.
+- Triple asserted yang tidak menurunkan apa pun, dan alasannya: `ex:andi a ex:MahasiswaBerprestasi`, karena tidak ada hubungan `rdfs:subClassOf` yang menghubungkan kelas tersebut dengan kelas lain.
 
 ## Langkah 2 - Tebak lalu cek
 

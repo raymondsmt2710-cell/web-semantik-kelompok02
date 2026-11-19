@@ -8,7 +8,7 @@
 
 ## Bagian B - DBpedia ke Turtle
 - Output demo_c.py: 48 triple, film tanpa tanggal: 16
-- Sumber data: DBpedia (endpoint SPARQL).
+- Sumber data: .
 - Triple yang tetap tercetak untuk film tanpa tanggal: Movie, schema:name, dan schema:director tetap dihasilkan. Triple schema:datePublished tidak dihasilkan karena tanggal rilis tidak tersedia. Hal ini terjadi karena penggunaan OPTIONAL.
 - Query lokal tanpa internet: Tetap dapat dijalankan karena data sudah disimpan dalam file film_nolan.ttl. RDFLib membaca dan memproses data tersebut secara lokal tanpa mengakses DBpedia.
 - Mengapa dbo:Film memberi 0 pada film_nolan.ttl: Karena query CONSTRUCT mengubah tipe film dari dbo:Film menjadi schema:Movie. Akibatnya, graf hasil hanya menyimpan tipe schema:Movie, bukan dbo:Film.
