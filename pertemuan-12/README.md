@@ -43,11 +43,28 @@
 - Yang menjalankan rdfs9 di Q9: penulis query. Jalur P31/P279* meniru aturan rdfs9 secara manual, dan mesin hanya mengeksekusi jalur itu
 
 ## Langkah 5 - Konsistensi
-- Pesan galat RDFS / OWL RL: [isi] / [isi]
-- Individu yang disebut pesan: [isi]
-- Setelah baris terbalik dihapus: [isi]
-- Isi laporan_kelas.csv sebelum dan sesudah: [isi]
-- Dari mana dosen menjadi mata kuliah: [jawaban]
+- Pesan galat RDFS / OWL RL: [0] / [1]
+- Individu yang disebut pesan: [web_semantik (Disjoint classes Pegawai and MataKuliah have a common individual web_semantik)
+]
+- Setelah baris terbalik dihapus: [0 pesan galat di RDFS maupun OWL RL]
+- Isi laporan_kelas.csv sebelum dan sesudah: 
+sebelum:
+kelas,asserted,rdfs,owl_rl
+Dosen,0,0,0
+Pegawai,0,2,2
+MataKuliah,0,3,3
+
+sesudah:
+kelas,asserted,rdfs,owl_rl
+Dosen,0,0,0
+Pegawai,0,1,1
+MataKuliah,0,2,2
+
+- Dari mana dosen menjadi mata kuliah: 
+rdfs:range ex:MataKuliah pada ex:mengajar membuat objek triple terbalik
+  diturunkan menjadi MataKuliah (rdfs3), sedangkan rdfs:domain membuat subjeknya (web_semantik) menjadi Dosen (rdfs2)
+  lalu Pegawai (rdfs9). Karena Pegawai owl:disjointWith MataKuliah, OWL RL melaporkan konflik. Profil RDFS tidak
+  melaporkan apa pun karena tidak punya aturan untuk owl:disjointWith dan tidak mengenal kontradiksi.
 
 ## Refleksi
 1. Mengapa graf asserted disimpan terpisah dari graf inferred, dan apa akibatnya bila keduanya dicampur seperti kampus_usu_v4.ttl?
